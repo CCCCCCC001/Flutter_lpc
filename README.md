@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+#There is error in ios.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
