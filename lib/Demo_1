@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+
+class NewRoute1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: new AppBar(
+        title: Text("A New Route."),
+      ),
+      body: new Center(
+          child: new Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          new Text(
+            '性别',
+          ),
+          new Text(
+            '性格',
+          ),
+          FlatButton(
+            child: Text("爱好"),
+            textColor: Colors.blue,
+            onPressed: () async {
+              var result = await Navigator.push(context,
+                  MaterialPageRoute(builder: (context) {
+                return NewRoute1(
+                    // text:"1",
+                    );
+              }));
+              print(result);
+            },
+          )
+        ],
+      )),
+    );
+  }
+}
